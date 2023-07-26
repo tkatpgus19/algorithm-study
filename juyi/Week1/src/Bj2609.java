@@ -6,31 +6,31 @@ import java.util.StringTokenizer;
 public class Bj2609 {
 
 	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); // BufferedReader ¼±¾ð
-		StringTokenizer st = new StringTokenizer(br.readLine()); // °ø¹éÀ¸·Î ±¸ºÐÇÏ¿© ÀÔ·Â
-		int a = Integer.parseInt(st.nextToken()); // StringÀ» int·Î º¯È¯
-		int b = Integer.parseInt(st.nextToken()); // StringÀ» int·Î º¯È¯
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); // BufferedReader ì„ ì–¸
+		StringTokenizer st = new StringTokenizer(br.readLine()); // ê³µë°±ìœ¼ë¡œ êµ¬ë¶„í•˜ì—¬ ìž…ë ¥
+		int a = Integer.parseInt(st.nextToken()); // Stringì„ intë¡œ ë³€í™˜
+		int b = Integer.parseInt(st.nextToken()); // Stringì„ intë¡œ ë³€í™˜
 		
-		// À¯Å¬¸®µå È£Á¦¹ý »ç¿ë
-		// A = BQ + R1 -> B = R1Q + R2 -> R1 = R2Q + R3 ... ³ª´©¾î¶³¾îÁö±â ÀüÀÇ RÀÌ ÃÖ´ë°ø¾à¼ö
+		// ìœ í´ë¦¬ë“œ í˜¸ì œë²• ì‚¬ìš©
+		// A = BQ + R1 -> B = R1Q + R2 -> R1 = R2Q + R3 ... ë‚˜ëˆ„ì–´ë–¨ì–´ì§€ê¸° ì „ì˜ Rì´ ìµœëŒ€ê³µì•½ìˆ˜
 		int r, aa = 0, bb = 0;
 		
 		if(a % b == 0) r = b;
 		else {
-			r = a % b; // Ã¹¹øÂ° ³ª¸ÓÁö ÀúÀå
-			aa = b;    // »õ·Î ³ª´©¾îÁú ¼ö¸¦ »õ·Î¿î º¯¼ö¿¡ ÀúÀå
-			bb = r;    // »õ·Î ³ª´©°Ô µÉ ¼ö¸¦ »õ·Î¿î º¯¼ö¿¡ ÀúÀå
+			r = a % b; // ì²«ë²ˆì§¸ ë‚˜ë¨¸ì§€ ì €ìž¥
+			aa = b;    // ìƒˆë¡œ ë‚˜ëˆ„ì–´ì§ˆ ìˆ˜ë¥¼ ìƒˆë¡œìš´ ë³€ìˆ˜ì— ì €ìž¥
+			bb = r;    // ìƒˆë¡œ ë‚˜ëˆ„ê²Œ ë  ìˆ˜ë¥¼ ìƒˆë¡œìš´ ë³€ìˆ˜ì— ì €ìž¥
 			
 			while(true) {
-				if(aa % bb == 0) break; // ³ª¸ÓÁö°¡ 0ÀÌ¸é r¿¡ ÀúÀåÇÏÁö ¾Ê°í Å»Ãâ
-				r = aa % bb;            // ³ª¸ÓÁö°¡ 0ÀÌ ¾Æ´Ò ¶§ »õ·Î ÀúÀå
-				aa = bb;                // ³ª¸ÓÁö°¡ 0ÀÌ ¾Æ´Ò ¶§ »õ·Î ÀúÀå
-				bb = r;                 // ³ª¸ÓÁö°¡ 0ÀÌ ¾Æ´Ò ¶§ »õ·Î ÀúÀå
+				if(aa % bb == 0) break; // ë‚˜ë¨¸ì§€ê°€ 0ì´ë©´ rì— ì €ìž¥í•˜ì§€ ì•Šê³  íƒˆì¶œ
+				r = aa % bb;            // ë‚˜ë¨¸ì§€ê°€ 0ì´ ì•„ë‹ ë•Œ ìƒˆë¡œ ì €ìž¥
+				aa = bb;                // ë‚˜ë¨¸ì§€ê°€ 0ì´ ì•„ë‹ ë•Œ ìƒˆë¡œ ì €ìž¥
+				bb = r;                 // ë‚˜ë¨¸ì§€ê°€ 0ì´ ì•„ë‹ ë•Œ ìƒˆë¡œ ì €ìž¥
 			}
 		}
 		
-		System.out.println(r); // ³ª¸ÓÁö°¡ 0ÀÌ µÇ±â ÀüÀÇ rÀÌ ÃÖ´ë°ø¾à¼ö. Ãâ·Â
-		System.out.println(a * b / r); // AB = L(ÃÖ¼Ò°ø¹è¼ö)G(ÃÖ´ë°ø¾à¼ö) °ø½Ä ÀÌ¿ë
+		System.out.println(r); // ë‚˜ë¨¸ì§€ê°€ 0ì´ ë˜ê¸° ì „ì˜ rì´ ìµœëŒ€ê³µì•½ìˆ˜. ì¶œë ¥
+		System.out.println(a * b / r); // AB = L(ìµœì†Œê³µë°°ìˆ˜)G(ìµœëŒ€ê³µì•½ìˆ˜) ê³µì‹ ì´ìš©
 	}
 
 }

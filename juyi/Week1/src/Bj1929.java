@@ -6,20 +6,20 @@ import java.util.StringTokenizer;
 public class Bj1929 {
 
 	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); // BufferedReader ¼±¾ð
-		StringTokenizer st = new StringTokenizer(br.readLine()); // °ø¹é ±¸ºÐ
-		int M = Integer.parseInt(st.nextToken()); // M ÀÔ·Â
-		int N = Integer.parseInt(st.nextToken()); // N ÀÔ·Â
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); // BufferedReader ì„ ì–¸
+		StringTokenizer st = new StringTokenizer(br.readLine()); // ê³µë°± êµ¬ë¶„
+		int M = Integer.parseInt(st.nextToken()); // M ìž…ë ¥
+		int N = Integer.parseInt(st.nextToken()); // N ìž…ë ¥
 		
 		for(int i = M; i <= N; i++) {
 			boolean prime = true;
 			for(int j = 2; j <= Math.sqrt(i); j++) {
 				if(i % j == 0) {
-					prime = false; // ³ª´©¾î¶³¾îÁø´Ù¸é ¼Ò¼ö°¡ ¾Æ´Ï¹Ç·Î false Ã³¸®
+					prime = false; // ë‚˜ëˆ„ì–´ë–¨ì–´ì§„ë‹¤ë©´ ì†Œìˆ˜ê°€ ì•„ë‹ˆë¯€ë¡œ false ì²˜ë¦¬
 					break;
 				}
 			}
-			if(i != 1 && prime == true) System.out.println(i); // 1Àº ¼Ò¼ö°¡ ¾Æ´Ï¹Ç·Î 1 Á¦¿Ü
+			if(i != 1 && prime == true) System.out.println(i); // 1ì€ ì†Œìˆ˜ê°€ ì•„ë‹ˆë¯€ë¡œ 1 ì œì™¸
 		}
 	}
 }

@@ -4,12 +4,12 @@ import java.io.InputStreamReader;
 
 public class Bj13909 {
 	public static void main(String[] args) throws NumberFormatException, IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); // BufferedReader ¼±¾ð
-		int N = Integer.parseInt(br.readLine()); // N ÀÔ·Â ¹Þ±â
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); // BufferedReader ì„ ì–¸
+		int N = Integer.parseInt(br.readLine()); // N ìž…ë ¥ ë°›ê¸°
 		
 		int count = 0, i = 1;
 		
-		while(i * i <= N) { // Á¦°ö¼öÀÇ °³¼ö¸¦ Ã£±â À§ÇÑ ¹Ýº¹¹®
+		while(i * i <= N) { // ì œê³±ìˆ˜ì˜ ê°œìˆ˜ë¥¼ ì°¾ê¸° ìœ„í•œ ë°˜ë³µë¬¸
 			count++;
 			i++;
 		}

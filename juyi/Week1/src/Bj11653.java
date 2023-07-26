@@ -4,18 +4,18 @@ import java.io.InputStreamReader;
 
 public class Bj11653 {
 	public static void main(String[] args) throws NumberFormatException, IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); // BufferedReader ¼±¾ğ
-		int N = Integer.parseInt(br.readLine()); // N ÀÔ·Â ¹Ş±â
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); // BufferedReader ì„ ì–¸
+		int N = Integer.parseInt(br.readLine()); // N ì…ë ¥ ë°›ê¸°
 		
-		int i = 2; // ¼ÒÀÎ¼öºĞÇØ 2ºÎÅÍ ½ÃÀÛ
-		while(true) { // NÀÌ 1ÀÌ µÉ ¶§±îÁö ¹İº¹
-			if(N == 1) return; // NÀÌ 1ÀÌ¸é main Á¾·á
-			if(N % i == 0) { // NÀÌ i·Î ³ª´©¾î ¶³¾îÁö¸é ¼ÒÀÎ¼öºĞÇØ 
-				System.out.println(i); // i Ãâ·Â
-				N /= i; // NÀ» i·Î ³ª´« ¸òÀ¸·Î º¯È¯
-				i = 2;  // ´Ù½Ã 2ºÎÅÍ ¼ÒÀÎ¼öºĞÇØ ½ÃÀÛ
+		int i = 2; // ì†Œì¸ìˆ˜ë¶„í•´ 2ë¶€í„° ì‹œì‘
+		while(true) { // Nì´ 1ì´ ë  ë•Œê¹Œì§€ ë°˜ë³µ
+			if(N == 1) return; // Nì´ 1ì´ë©´ main ì¢…ë£Œ
+			if(N % i == 0) { // Nì´ ië¡œ ë‚˜ëˆ„ì–´ ë–¨ì–´ì§€ë©´ ì†Œì¸ìˆ˜ë¶„í•´ 
+				System.out.println(i); // i ì¶œë ¥
+				N /= i; // Nì„ ië¡œ ë‚˜ëˆˆ ëª«ìœ¼ë¡œ ë³€í™˜
+				i = 2;  // ë‹¤ì‹œ 2ë¶€í„° ì†Œì¸ìˆ˜ë¶„í•´ ì‹œì‘
 			}
-			else i++; // NÀÌ i·Î ³ª´©¾î ¶³¾îÁöÁö ¾ÊÀ¸¸é i Áõ°¡
+			else i++; // Nì´ ië¡œ ë‚˜ëˆ„ì–´ ë–¨ì–´ì§€ì§€ ì•Šìœ¼ë©´ i ì¦ê°€
 		}
 	}
 }

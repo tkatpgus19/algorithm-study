@@ -5,12 +5,12 @@ import java.io.InputStreamReader;
 public class Bj4948 {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); // BufferedReader ¼±¾ğ
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); // BufferedReader ì„ ì–¸
 		int n, count;
 		
 		while(true) {
 			n = Integer.parseInt(br.readLine());
-			if(n == 0) return; // nÀÌ 0ÀÌ¸é Á¾·á
+			if(n == 0) return; // nì´ 0ì´ë©´ ì¢…ë£Œ
 			
 			count = 0;
 			
