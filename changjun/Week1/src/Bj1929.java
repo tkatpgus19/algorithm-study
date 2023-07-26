@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// 소수 구하기  
 public class Bj1929 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

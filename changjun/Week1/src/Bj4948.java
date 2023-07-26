@@ -1,14 +1,15 @@
 import java.util.Scanner;
 
+// 베르트랑 공준 
 public class Bj4948 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
 		
 		while(true) {
-
 			int N = sc.nextInt();
 			
+			// 0 입력 되면 탈출 
 			if(N == 0) break;
 			
 			Boolean[] primeList = new Boolean[2*N+1];

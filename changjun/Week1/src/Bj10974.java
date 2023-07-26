@@ -3,8 +3,8 @@ import java.io.*;
 import java.util.StringTokenizer;
 
 
-// N과 M
-public class Bj15649 {
+// 모든 순열 
+public class Bj10974 {
 	static int N;
 	static int M;
 	static int[] arr;
@@ -42,7 +42,7 @@ public class Bj15649 {
 		
 		StringTokenizer st = new StringTokenizer(s); //StringTokenizer 인자값에 입력 문자열 넣음
 		N = Integer.parseInt(st.nextToken()); //첫번째 호출
-		M = Integer.parseInt(st.nextToken()); //두번째 호출
+		M = N;
 		
 		arr = new int[M];
 		isUsed = new int[N];
@@ -54,16 +54,3 @@ public class Bj15649 {
 	}
 }
 
-//백트래킹 
-//백트래킹의 시작. 기본 구조을 익혀놓으면 다른 문제에도 적용가능.
-//ex) 9663 N-Queen, 1182 부분수열의 합  
-//참조 -> 바킹독 블로그 - 백트래킹.
-//https://blog.encrypted.gg/945 
-
-//전역변수 c처럼 static 으로 클래스 영역에 선언.
-
-//백준 8%에서 시간초과.
-//java - println() 1000만 까지 자연수 찍는 속도 평균 30초.
-//java - BufferedWriter 0.9초
-//java - StringBuilder를 이용해 문자열 하나로 합친 뒤 println() 1.2초 -> 선택!
-//참조 -> 백준 출력속도 비교 https://www.acmicpc.net/blog/view/57

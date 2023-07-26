@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-
+//최대공약수와 최소공배수  
 public class Bj2609 {
 
     public static int GCD(int a, int b){
@@ -16,7 +16,6 @@ public class Bj2609 {
         }
 
         //나머지가 0이면 b가 최대공약수.
-     
         if(a%b == 0){
             return b;
         } else{

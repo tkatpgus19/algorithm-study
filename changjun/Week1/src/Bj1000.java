@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// A+B
 public class Bj1000 {
 
 	public static void main(String[] args) {
