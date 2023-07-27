@@ -26,6 +26,7 @@ public class Bj15649 {
 				System.out.print(output[i] + " ");
 			}
 			System.out.println();
+			return;
 		}
 		
 		for(int i = 0; i < n; i++) {

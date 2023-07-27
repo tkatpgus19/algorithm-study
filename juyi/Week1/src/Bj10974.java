@@ -3,7 +3,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Bj10974 {
-
+	static StringBuilder sb = new StringBuilder();
+	
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int N = Integer.parseInt(br.readLine());
@@ -15,14 +16,17 @@ public class Bj10974 {
 			arr[i] = i + 1;
 		}
 		DFS(arr, output, visited, 0, N);
+		String result = sb.toString();
+		System.out.println(result);
 		
 	}
 	public static void DFS(int[] arr, int[] output, boolean[] visited, int depth, int n) {
 		if(depth == n) {
 			for(int i = 0; i < n; i++) {
-				System.out.print(output[i] + " ");
+				sb.append(output[i] + " ");
 			}
-			System.out.println();
+			sb.append("\n");
+			return;
 		}
 		
 		for(int i = 0; i < n; i++) {
