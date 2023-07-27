@@ -26,3 +26,8 @@
 ## Etc
 - 초기 환경세팅 : https://exclusive-gibbon-455.notion.site/6c497a627089405398d1b5c695c7dd91?pvs=4
 - 문제 : https://exclusive-gibbon-455.notion.site/379d52c739ed4f2fab9e4601a61d5c01?pvs=4
+
+## Participants
+<a href="https://github.com/tkatpgus19/Python/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=tkatpgus19/algorithm-study"/>
+</a>
