@@ -8,7 +8,6 @@ import java.io.*;
  *      recommend 명령으로 난도+문제번호의 최댓+최솟값을 출력해야 하므로
  *      1. 난도를 "key"값으로, 해당 난도의 문제 번호들을 정렬한 상태로 저장하는 TreeSet이 "value"로 구성된
  *      2. 난도를 기준으로 정렬된 TreeMap을 구현하여 해결한다.
- *
  *      그리고 solved 명령을 통해 문제번호만으로 문제를 제거해야 하므로
  *      단순히 문제번호를 "key"값으로, 난도를 "value"로 갖는 TreeMap(or HashMap) 역시 사용한다.
  */
