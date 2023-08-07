@@ -8,14 +8,13 @@ import java.util.*;
 public class Bj2800 {
     static int N;
     static boolean[] visited;
-    static int[] numArr;
-    static int[] output;
-    static char[] charArr;
     static List<int[]> bracketPos = new ArrayList<>();
-    static List<String> answer = new ArrayList<>();
+    static char[] charArr;
+    static Set<String> answer = new HashSet<>();
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
         Deque<Integer> stack = new ArrayDeque<>();
         charArr = br.readLine().toCharArray();
 
@@ -27,41 +26,35 @@ public class Bj2800 {
                 bracketPos.add(new int[]{i, stack.removeLast()});
             }
         }
-
-        // 조합 구현을 위한 준비
+        
+        // 조합 구현을 위한 준비       
         N = bracketPos.size();
-        numArr = new int[N];
-        for(int i=0; i<N; i++){
-            numArr[i] = i+1;
-        }
         visited = new boolean[N];
-        output = new int[N];
 
-        // 각각 1개, 2개, ... N개의 조합을 구한다.
-        for(int i=0; i<N; i++){
-            comb(0, 0, i+1);
+        comb(0);
+        
+        List<String> tmp = new ArrayList<>(answer);
+        Collections.sort(tmp);
+        for(String a : tmp){
+            sb.append(a).append('\n');
         }
-
-        // 중복제거
-        Set<String> tmp = new HashSet<>(answer);
-        answer = new ArrayList<>(tmp);
-        Collections.sort(answer);
-
-        for(String a : answer){
-            System.out.println(a);
-        }
+        System.out.println(sb);
     }
-
-    // 조합
-    static void comb(int cnt, int start, int max){
-        if(cnt == max){
+    
+    static void comb(int depth){
+        if(depth == visited.length){
             // 이번에 제외할 괄호의 인덱스를 check 리스트에 저장한다.
             List<Integer> check = new ArrayList<>();
-            for(int i : output){
-                if(i != 0){
-                    check.add(bracketPos.get(i-1)[0]);
-                    check.add(bracketPos.get(i-1)[1]);
-                }
+            int cnt = 0;
+            for(int i=0; i<visited.length; i++) {
+            	if(visited[i]) {
+            		check.add(bracketPos.get(i)[0]);
+                    check.add(bracketPos.get(i)[1]);
+                    cnt++;
+            	}
+            }
+            if(cnt == 0) {
+            	return;
             }
             String result = "";
             // check 리스트에 존재하는 인덱스 요소는 스킵하며 저장한다.
@@ -74,13 +67,13 @@ public class Bj2800 {
             answer.add(result);
             return;
         }
-        for(int i=start; i<N; i++){
-            visited[i] = true;
-            output[cnt] = numArr[i];
-            comb(cnt+1, i+1, max);
-            visited[i] = false;
-        }
+        visited[depth] = true;
+        comb(depth + 1);
+        visited[depth] = false;
+        comb(depth + 1);
     }
 
     // 메모리 : 68172KB, 시간 : 308ms
+    // java11 로 제출하면
+    // 메모리 : 28472KB, 시간 : 300ms
 }
