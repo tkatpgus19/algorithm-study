@@ -25,7 +25,7 @@ public class Bj14425 {
             st = new StringTokenizer(br.readLine());
             check.add(st.nextToken());
         }
-        check.retainAll(S);
+        check.retainAll(S); // 차! 집! 합!
         System.out.println(check.size());
     }
 }

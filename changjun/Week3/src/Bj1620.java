@@ -12,7 +12,10 @@ public class Bj1620 {
 
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
-
+        
+        // 번호 -> 포켓몬 이름 
+        // 포켓몬 이름 -> 번호
+        // 맵 두 개 생성.
         Map<Integer, String> pokemon = new HashMap<>();
         Map<String,Integer> pokemonR = new HashMap<>();
 
@@ -34,6 +37,5 @@ public class Bj1620 {
                 System.out.println(pokemon.get(Integer.parseInt(s)-1));
             }
         }
-        //entry로
     }
 }

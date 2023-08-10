@@ -12,17 +12,19 @@ public class Bj4358 {
         String s = "";
 
         int cnt = 0;
-        while((s = br.readLine())!=null){
+        while((s = br.readLine())!=null){ // 인텔리제이는 EOF 처리가...
             if(tree.containsKey(s)){
+            	// 만약 이미 있는 학명이면 빼서 카운트 1증가 후 다시 넣기 
                 int tmp = tree.remove(s);
                 tree.put(s,tmp+1);
             } else{
+            	// 미등록 학명은 새로 넣기.
                 tree.put(s,1);
             }
             cnt++;
         }
         ArrayList<String> al = new ArrayList(tree.keySet());
-        Collections.sort(al);
+        Collections.sort(al); // 정렬 
         for(String treeName : al){
             System.out.printf("%s %.4f\n",treeName,(double)tree.get(treeName)/cnt*100);
         }
