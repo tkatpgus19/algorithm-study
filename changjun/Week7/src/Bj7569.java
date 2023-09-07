@@ -6,7 +6,7 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 // 토마토
 // 못생긴
-//
+// 토마토  
 public class Bj7569 {
     static class Tomato{
         int x;

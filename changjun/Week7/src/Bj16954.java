@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.StringTokenizer;
-// 움직이는 미로 탈출
+// 움직이는 미로 탈출.
 
 // 벽은 맨 아래로 가면 맨 위로 가는 게 아니라 사 라 진 다.
 // 벽이 아래로 이동하므로 처음 큐에 넣을 때 아래서 부터 넣어야 겹치지 않는다.
