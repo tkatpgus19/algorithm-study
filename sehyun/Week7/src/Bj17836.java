@@ -6,7 +6,7 @@ import java.util.*;
  * 문제: 2차원의 미로가 주어지고 마법의 칼 그람의 좌표가 주어질 때, 공주님의 좌표까지 도달하는 데 걸리는 최소의 시간을 구하시오.
  * 해결: 먼저 그람을 먹지 않고 공주에게 도달하는 경로를 bfs로 구한다. 이후 갱신된 경로 배열을 참고해 그람을 먹을 수 있는지 파악하고, 먹을 수 있으면 그람을 먹고 나서 벽을 무시하는 루트로 공주에게 도달하는 경로를 구한다.
  */
-public class Bj17836 {
+public class Main {
     static int[] dx = {-1, 1, 0, 0};
     static int[] dy = {0, 0, -1, 1};
     static int[][] graph;
@@ -26,7 +26,7 @@ public class Bj17836 {
 
         // 그람의 위치를 저장하는 배열 선언
         int[] gramPos = new int[2];
-        
+
         for(int i=0; i<N; i++){
             st = new StringTokenizer(br.readLine());
             for(int j=0; j<M; j++){
@@ -66,7 +66,7 @@ public class Bj17836 {
                 answer = path[N-1][M-1];
             }
         }
-        
+
         // 찾은 최단 시간이 -1이거나 T초보다 크면 실패
         if(answer<0 || answer>T){
             System.out.println("Fail");
@@ -97,15 +97,11 @@ public class Bj17836 {
                     path[nx][ny] = path[x][y] + 1;
                     queue.addLast(new int[]{nx, ny});
                 }
-                // 두번째 탐색인데 이 루트가 더 빨랐다면 거리값 갱신
-                else {
-                    path[nx][ny] = Math.min(path[nx][ny], path[x][y] + 1);
-                }
 
             }
         }
     }
-    
+
     // 그람 루트 탐색(벽 무시 가능)
     static void bfs2(int sx, int sy){
         Deque<int[]> queue = new ArrayDeque<>();
@@ -121,11 +117,9 @@ public class Bj17836 {
                     continue;
                 }
                 // 벽이든 빈공간이든 상관없이 거리값을 갱신해가며 탐색
-                if(path[nx][ny] == 0){
+                if(path[nx][ny] == 0) {
                     path[nx][ny] = path[x][y] + 1;
                     queue.addLast(new int[]{nx, ny});
-                } else {
-                    path[nx][ny] = Math.min(path[nx][ny], path[x][y] + 1);
                 }
 
             }
