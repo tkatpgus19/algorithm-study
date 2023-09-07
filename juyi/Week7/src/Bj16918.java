@@ -41,17 +41,11 @@ public class Bj16918 {
 			case 1:
 				bfs();
 				for(int i = 0; i < R; i++) {
-					System.out.println(Arrays.toString(map[i]));
-				}
-				for(int i = 0; i < R; i++) {
 					for(int j = 0; j < C; j++) {
 						if(map[i][j] == 'O') queue.offer(new Data(i, j));
 					}
 				}
 				bfs();
-				for(int i = 0; i < R; i++) {
-					System.out.println(Arrays.toString(map[i]));
-				}
 				break;
 			case 3:
 				bfs();
@@ -61,7 +55,7 @@ public class Bj16918 {
 
 		for(int i = 0; i < R; i++) {
 			for(int j = 0; j < C; j++) {
-				sb.append(map[i][j]).append(" ");
+				sb.append(map[i][j]);
 			}
 			sb.append("\n");
 		}
