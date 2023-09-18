@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.StringTokenizer;
-// 불!
+// 불!!
 // 지훈 복제본들과 불들은 매 초마다 전부 이동해야 한다.
 // 따라서 지훈큐, 불큐, 지훈방문배열, 불방문배열을 따로 만들고.
 // while(지훈 큐) 안에 while(지훈 큐), while(불 큐)를 만들어 임시 큐에 집어 넣어 모두 이동.

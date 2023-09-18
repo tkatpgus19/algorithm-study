@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.StringTokenizer;
-// 말이 되고픈 원숭이.
+// 말이 되고픈 원숭이..
 public class Bj1600 {
     static class Monkey{
         int x;

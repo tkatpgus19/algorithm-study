@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.StringTokenizer;
-// 공주님을 구해라! (석방하라..)
+// 공주님을 구해라! (석방하라...)
 // 벽 뿌수기 문제와 동일.
 // 방문체크를 검 있을 때 없을 때 따로 하면 됨.
 public class Bj17836 {

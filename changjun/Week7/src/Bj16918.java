@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
-// 봄버맨
+// 봄버맨.
 //0 초기.
 //1 아무것도 안 함.
 //2 설치함.

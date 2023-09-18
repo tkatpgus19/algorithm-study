@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.StringTokenizer;
-// 쉬운 최단거리.
+// 쉬운 최단거리..
 public class Bj14940 {
     static class Crd{
         int x;

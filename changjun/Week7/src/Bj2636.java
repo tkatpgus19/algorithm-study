@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.StringTokenizer;
-// 치----즈
+// 치-----즈
 // for -> while (BFS)
 // 맵에 각 치즈의 녹은 순간 기록.
 // 0과 1과 겹치지 않으려고 2부터. 마지막에 1 빼준다.
