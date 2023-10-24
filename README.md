@@ -2,7 +2,7 @@
 구미 10기 알고리즘 스터디입니다.
 
 ## Commit, Pull Request
-<code>solved(Bj문제번호,Bj문제번호, ...)</code>
+<code>solved(Bj문제번호, Bj문제번호, ...)</code>
 
 ## Info
 - 인원 : 5명
@@ -21,7 +21,6 @@
 #### After meeting
 - 다른 사람의 문제풀이를 보고 <code>comment</code>를 남긴 후 <code>apporve</code> 한다.
 - 모든 스터디원들의 <code>approve</code>가 충족되면 본인이 직접 <code>main</code> 브랜치로 <code>merge</code> 한다.
-- 모든 <code>Pull request</code> 가 처리되었는지 확인하고 새로운 문제풀이를 위해 자신의 로컬로 <code>pull</code> 한다.
   
 ## Etc
 - 초기 환경세팅 : https://exclusive-gibbon-455.notion.site/6c497a627089405398d1b5c695c7dd91?pvs=4
